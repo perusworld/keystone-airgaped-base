@@ -12,6 +12,7 @@ const { decodeToDataItem, RegistryTypes } = extend;
 export enum SignType {
   Transaction = 1,
   DataItem = 2,
+  Message
 }
 
 export enum SaltLen {

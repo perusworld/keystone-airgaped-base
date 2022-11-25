@@ -43,7 +43,7 @@ describe("arweave-sign-request", () => {
   });
 
   it("should construct an ArweaveSignRequest object from string", () => {
-    const xfp = "12345678";
+    const xfp = "e9181cf3";
     const signData = Buffer.from(
       "af78f85b29d88a61ee49d36e84139ec8511c558f14612413f1503b8e6959adca",
       "hex"
@@ -53,7 +53,7 @@ describe("arweave-sign-request", () => {
     const request = ArweaveSignRequest.constructArweaveRequest(
       signData,
       xfp,
-      SignType.Message,
+      SignType.Transaction,
       SaltLen.Zero,
       requestID,
       undefined,
@@ -61,7 +61,7 @@ describe("arweave-sign-request", () => {
     );
     const ur = request.toUREncoder(1000).nextPart();
     expect(ur).toBe(
-      "ur:arweave-sign-request/oladcybgeehfksaotpdagdndcawmgtfrkigrpmndutdnbtkgfssbjnaxhdcxpeksyahpdttplehswygatejtlrbwnnspgycegomybbhsdkbwwngdfrmninhkpmsgaaylahaeaminhsjpiajljtjtihiajygtoeqzkb"
+      "ur:arweave-sign-request/oladcywlcscewfaotpdagdndcawmgtfrkigrpmndutdnbtkgfssbjnaxhdcxpeksyahpdttplehswygatejtlrbwnnspgycegomybbhsdkbwwngdfrmninhkpmsgaaadahaeaminhsjpiajljtjtihiajyislsiywf"
     );
   });
 });
