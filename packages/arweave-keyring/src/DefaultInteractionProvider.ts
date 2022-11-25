@@ -3,7 +3,7 @@ import {
   ArweaveSignature,
   ArweaveSignRequest,
 } from "@keystonehq/bc-ur-registry-arweave";
-import { InteractionProvider } from "InteractionProvider";
+import { InteractionProvider } from "./InteractionProvider";
 import sdk, { PlayStatus, ReadStatus, SupportedResult } from "@keystonehq/sdk";
 
 export class DefaultInteractionProvider implements InteractionProvider {

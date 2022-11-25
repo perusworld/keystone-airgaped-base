@@ -1,5 +1,5 @@
 import * as uuid from "uuid";
-import {InteractionProvider} from "InteractionProvider";
+import {InteractionProvider} from "./InteractionProvider";
 import {ArweaveCryptoAccount, ArweaveSignRequest, SignType,} from "@keystonehq/bc-ur-registry-arweave";
 
 const keyringType = "QR Hardware Wallet Device";
@@ -56,7 +56,6 @@ export class BaseKeyring {
     this.keyData = data.getKeyData();
     this.device = data.getDevice();
     this.xfp = data.getMasterFingerprint().toString("hex");
-    this.name = data.getDevice();
     this.initialized = true;
   }
 

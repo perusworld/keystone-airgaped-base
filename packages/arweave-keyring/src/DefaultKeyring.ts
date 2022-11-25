@@ -1,5 +1,5 @@
-import { DefaultInteractionProvider } from "DefaultInteractionProvider";
-import { BaseKeyring } from "BaseKeyring";
+import { DefaultInteractionProvider } from "./DefaultInteractionProvider";
+import { BaseKeyring } from "./BaseKeyring";
 
 export class DefaultKeyring extends BaseKeyring {
   static type = BaseKeyring.type;
